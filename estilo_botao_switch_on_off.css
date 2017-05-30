@@ -1,0 +1,83 @@
+body {
+	font-family: 'Robot';
+	font-weight: 400;
+	background-color: #95a5a6;
+}
+h1 {
+	font-size: 36px;
+	color: #253536;
+	padding-bottom: 15px;
+	text-align: center;
+	margin: 30px 0;
+	display: block;
+}
+h1:after {
+	content: " ";
+	display: block;
+	margin: 15px auto 0 auto;
+	width: 90px;
+	height: 2px;
+	background-color: #354546;
+}
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+.switch {
+	display: inline-block;
+	position: relative;
+	width: 58px;
+	vertical-align: top;
+}
+.switch > label {
+	display: block;
+	position: relative;
+	height: 25px;
+	background-color: #fff;
+	border: 2px solid #d9d9d9;
+	transition: all 0.15s ease-in-out;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+}
+.switch > label:before {
+	content: attr(data-desliga);
+	position: absolute;
+	top: 0px;
+	right: 3px;
+	width: 33px;
+}
+.switch > label:after {
+	content: '';
+	display: block;	
+	width: 17px;
+	height: 17px;
+	margin: 2px;
+	background-color: #ccc;
+}
+.switch > input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: inherit;
+	height: inherit;
+	opacity: 0;
+}
+.switch > input:checked + label {
+	padding-left: 33px;
+	background-color: #3fb6f2;
+	border-color: #3fb6f2;
+	color: #fff;
+}
+.switch > input:checked + label:before {
+	content: attr(data-liga);
+	left: 1px;
+}
+
+.switch > input:checked + label:after {
+	margin: 1px;
+	width: 19px;
+	height: 19px;
+	background-color: #fff;
+
+}

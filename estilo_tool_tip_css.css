@@ -1,0 +1,48 @@
+h1:after {
+	content: " ";
+	display: block;
+	margin: 15px auto 0 auto;
+	width: 90px;
+	height: 2px;
+	background-color: #354546;
+}
+
+.container {
+	position: relative;
+	width: 1024px;
+	margin: 0 auto;
+}
+
+[data-tooltip] {
+	display: inline-block;
+	width: 1024px;
+	margin: 0 auto;
+}
+
+[data-tooltip]:after {
+	left: 50%
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+[data-tooltip]:hover:after {
+	content: attr(data-tooltip);
+	background-color: #333;
+	position: absolute;
+	bottom: 26px;
+	color: #fff;
+	text-align: center;
+	padding: 5px 15px;
+	white-space: nowrap;
+	margin: auto;
+}
+[data-tooltip]:hover:before {
+	content: " ";
+	border: solid;
+	border-color: #333 transparent;
+	border-width: 6px 6px 0px 6px;
+	position: absolute;
+	bottom: 20px;
+	margin-left: -6px; 
+}
